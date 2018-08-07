@@ -12,6 +12,8 @@ grammar_cjkRuby: true
 
 		keytool -genkeypair -v -keystore client.p12 -storetype pkcs12 -storepass 123456 -alias client -keyalg RSA -keysize 2048 -validity 36500
 
+		keytool -genkeypair -v -keystore root.p12 -storetype pkcs12 -storepass 123456 -alias root -keyalg RSA -keysize 2048 -validity 36500
+
 2. 导出客户端证书client.cer
 
 		Keytool -exportcert -v -file client.cer -keystore client.p12 -storepass 123456 -alias client
